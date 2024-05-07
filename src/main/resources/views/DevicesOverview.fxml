@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea"
+      fx:id="rootNode" fx:controller="roofsense.view.javafxview.DevicesOverviewJavafxView">
+    <children>
+        <TitledPane text="Roof 1">
+            <content>
+                <FlowPane>
+                    <children>
+                        <fx:include source="../components/DeviceCard.fxml"/>
+                        <fx:include source="../components/DeviceCard.fxml"/>
+                        <fx:include source="../components/DeviceCard.fxml"/>
+                        <fx:include source="../components/DeviceCard.fxml"/>
+                        <fx:include source="../components/DeviceCard.fxml"/>
+                        <fx:include source="../components/DeviceCard.fxml"/>
+                    </children>
+                </FlowPane>
+            </content>
+        </TitledPane>
+        <TitledPane text="Roof 2">
+            <content>
+                <FlowPane>
+                    <children>
+                        <fx:include source="../components/DeviceCard.fxml"/>
+                        <fx:include source="../components/DeviceCard.fxml"/>
+                        <fx:include source="../components/DeviceCard.fxml"/>
+                        <fx:include source="../components/DeviceCard.fxml"/>
+                        <fx:include source="../components/DeviceCard.fxml"/>
+                        <fx:include source="../components/DeviceCard.fxml"/>
+                    </children>
+                </FlowPane>
+            </content>
+        </TitledPane>
+    </children>
+</VBox>

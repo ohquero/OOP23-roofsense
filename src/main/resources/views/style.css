@@ -1,0 +1,9 @@
+FlowPane {
+     -fx-hgap: 10;
+     -fx-vgap: 10;
+     -fx-row-valignment: top;
+}
+
+.DeviceStateCard {
+     -fx-border-color: black;
+}

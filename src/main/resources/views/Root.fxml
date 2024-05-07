@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            fx:id="rootNode" prefHeight="800" prefWidth="1000" stylesheets="@style.css"
+            fx:controller="roofsense.view.javafxview.RootJavafxView">
+    <top>
+        <ToolBar BorderPane.alignment="CENTER">
+            <items>
+                <Button fx:id="showDevicesOverviewButton" mnemonicParsing="false" text="Devices overview"/>
+                <Separator orientation="VERTICAL">
+                    <padding>
+                        <Insets left="4.0"/>
+                    </padding>
+                </Separator>
+                <Label text="Dashboard:"/>
+                <ChoiceBox fx:id="dashboardsChoiceBox"/>
+                <Button fx:id="deleteDashboardButton" disable="true" mnemonicParsing="false" text="Delete dashboard"/>
+                <Button mnemonicParsing="false" text="New dashboard..."/>
+            </items>
+        </ToolBar>
+    </top>
+    <center>
+        <fx:include source="DevicesOverview.fxml"/>
+    </center>
+</BorderPane>
