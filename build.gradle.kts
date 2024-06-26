@@ -33,13 +33,20 @@ dependencies {
     // Suppressions for SpotBugs
     compileOnly("com.github.spotbugs:spotbugs-annotations:4.8.3")
 
-    // Example library: Guava. Add what you need (and remove Guava if you don't use it)
-    // implementation("com.google.guava:guava:28.1-jre")
+    // Reactive Streams
+    implementation("io.reactivex.rxjava3:rxjava:3.1.8")
+
+    // Tablesaw
+    implementation("tech.tablesaw:tablesaw-core:0.43.1")
 
     val jUnitVersion = "5.10.2"
     // JUnit API and testing engine
     testImplementation("org.junit.jupiter:junit-jupiter-api:$jUnitVersion")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$jUnitVersion")
+
+    // Logging library
+    implementation("org.slf4j:slf4j-api:2.0.13")
+    runtimeOnly("ch.qos.logback:logback-classic:1.5.6")
 }
 
 tasks.test {

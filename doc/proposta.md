@@ -1,0 +1,36 @@
+# Proposta di progetto
+
+L'obiettivo è realizzare un applicativo per il monitoraggio dell'efficienza energetica del tetto di un edificio.
+
+Funzionalità minime ritenute obbligatorie:
+
+- monitoraggio della temperatura della superficie interna ed esterna del tetto;
+- monitoraggio dell'energia permeata dal tetto;
+- possibilità di consultare gli storici delle temperature e dell'energia permeata;
+- possibilità di aggiungere, togliere e modificare i sensori;
+- calcolo per un determinato periodo temporale di:
+    - energia totale entrata/uscita dal tetto;
+    - temperatura massima e minima delle superfici del tetto.
+- confronto tra più lassi temporali di:
+    - energia totale entrata/uscita dal tetto;
+    - temperatura massima e minima delle superfici del tetto.
+- interfaccia grafica per consultare tutto quanto elencato precedentemente.
+
+Funzionalità opzionali:
+
+- possibilità di aggiungere manualmente dati acquisiti dai sensori, nel caso alcuni sensori non siano riusciti a
+  comunicare con successo ed un operatore abbia prelevato i dati di uno specifico sensore manualmente;
+- possibilità di definire più tetti per un singolo edificio, ognuna caratterizzata da un suo set di sensori.
+
+Challenge principali:
+
+- gestione di una importante mole di dati (i sensori registrano con frequenza di 10 minuti);
+- visto che i dati dei sensori sono caricati automaticamente in FTP da un sistema proprietario che si occupa di
+  raccogliere i dati dai sensori fisici occorrerà prevedere la possibilità di importare, possibilmente in modo
+  automatico, i dati che non sono già stati importati in precedenza;
+- la logica di ingestione dei dati dei sensori dovrà essere ben incapsulata per permettere di aggiungere facilmente
+  altri tipi di sensori, che potenzialmente comunicheranno attraverso altri protocolli;
+- (solo se è implementata la relativa funzionalità opzionale) corretta gestione dei dati acquisiti manualmente
+  dall'operatore, visto che presenteranno uno sfasamento temporale di qualche minuto per motivi relativi alla
+  sensoristica.
+
