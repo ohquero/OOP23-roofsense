@@ -3,8 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.BorderPane?>
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            fx:id="rootNode" prefHeight="800" prefWidth="1000" stylesheets="@style.css"
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17"
+            fx:id="rootNode" prefHeight="800" prefWidth="1000" stylesheets="@../style.css"
             fx:controller="roofsense.view.javafxview.RootJavafxView">
     <top>
         <ToolBar BorderPane.alignment="CENTER">

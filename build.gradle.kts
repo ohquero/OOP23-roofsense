@@ -7,7 +7,7 @@ plugins {
     application
 
     // JavaFX plugin allows to run the app using "./gradlew run" command
-    // by correctly import javafx JavaFX modules at runtime
+    // by correctly import JavaFX modules at runtime
     id("org.openjfx.javafxplugin") version "0.1.0"
 
     /*

@@ -1,0 +1,16 @@
+FlowPane {
+     -fx-hgap: 10;
+     -fx-vgap: 10;
+     -fx-row-valignment: top;
+}
+
+.device-state-card {
+     -fx-border-color: black;
+}
+
+.right-pane {
+    -fx-background-color: -fx-background;
+    -fx-border-color: -fx-outer-border;
+    -fx-border-width: 0 0 0 1;
+    -fx-padding: 10;
+}
