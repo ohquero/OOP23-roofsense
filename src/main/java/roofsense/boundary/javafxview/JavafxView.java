@@ -1,9 +1,6 @@
-package roofsense.view.javafxview;
+package roofsense.boundary.javafxview;
 
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-
-import java.io.IOException;
 
 public abstract class JavafxView {
 

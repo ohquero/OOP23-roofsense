@@ -1,4 +1,4 @@
-package roofsense.model;
+package roofsense.entity;
 
 import java.time.ZonedDateTime;
 import java.util.Objects;

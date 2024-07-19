@@ -9,18 +9,34 @@ Funzionalità minime ritenute obbligatorie:
 - possibilità di consultare gli storici delle temperature e dell'energia permeata;
 - possibilità di aggiungere, togliere e modificare i sensori;
 - calcolo per un determinato periodo temporale di:
-    - energia totale entrata/uscita dal tetto;
-    - temperatura massima e minima delle superfici del tetto.
+  - energia totale entrata/uscita dal tetto;
+  - temperatura massima e minima delle superfici del tetto.
 - confronto tra più lassi temporali di:
-    - energia totale entrata/uscita dal tetto;
-    - temperatura massima e minima delle superfici del tetto.
+  - energia totale entrata/uscita dal tetto;
+  - temperatura massima e minima delle superfici del tetto.
 - interfaccia grafica per consultare tutto quanto elencato precedentemente.
 
 Funzionalità opzionali:
 
 - possibilità di aggiungere manualmente dati acquisiti dai sensori, nel caso alcuni sensori non siano riusciti a
   comunicare con successo ed un operatore abbia prelevato i dati di uno specifico sensore manualmente;
-- possibilità di definire più tetti per un singolo edificio, ognuna caratterizzata da un suo set di sensori.
+
+- possibilità di definire più tetti per un singolo edificio, ognuna caratterizzata da un suo set dmperatura massima e minima delle superfici del tetto.
+  
+  confronto tra più lassi temporali di:
+  
+  energia totale entrata/uscita dal tetto;
+  
+  temperatura massima e minima delle superfici del tetto.
+  
+  interfaccia grafica per consultare tutto quanto elencato precedentemente.
+  
+  Funzionalità opzionali:
+  
+  possibilità di aggiungere manualmente dati acquisiti dai sensori, nel caso alcuni sensori non siano riusciti a
+  comunicare con successo ed un operatore abbia prelevato i dati di uno specifico sensore manualmente;
+  
+  possibilità di definire più tetti per un singolo edificio, ognuna caratterizzata da un suo set di sensori.
 
 Challenge principali:
 
@@ -33,4 +49,3 @@ Challenge principali:
 - (solo se è implementata la relativa funzionalità opzionale) corretta gestione dei dati acquisiti manualmente
   dall'operatore, visto che presenteranno uno sfasamento temporale di qualche minuto per motivi relativi alla
   sensoristica.
-

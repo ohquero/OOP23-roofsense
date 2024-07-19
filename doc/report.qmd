@@ -1,0 +1,94 @@
+# 1 - Analisi
+
+## 1.1 - Requisiti
+
+Il software, commissionato da un gruppo di ricerca dell'Università Politecnica delle Marche, coinsiste in un programma per monitorare, analizzare e confrontare l'efficenza energetica del tetto di alcuni edifici, con lo scopo di confrontare oggettivamente l'efficacia di alcuni sistemi di coibentazione.
+
+### Requisiti funzionali
+
+-   import automatico i dati prodotti dalla sensoristica, sia dei dati già presenti che dei dati prodotti durante l'esecuzione del programma, con la possibilità di monitorare l'operato del processo di import e avviso tramite interfaccia grafica di eventuali anomalie riscontrate.
+
+-   detect automatico dei sensori installati partendo dai sensori prodotti.
+
+-   possibilità di modificare gli attributi di un sensore.
+
+-   possibilità di raggruppare i sensori per versante e tetto sul quale sono installati.
+
+-   possibilità di visionare le misure acquisite dai sensori.
+
+### Requisiti non funzionali
+
+-   il corretto funzionamento dell'applicativo non dovrà risentire di eventuali periodi in cui non sarà eseguito. Dovrà quindi essere in grado di riprendere l'operato dal punto nel quale era rimasto all'ultima terminazione.
+
+## 1.2 - Analisi e modello del dominio
+
+Ogni edificio incluso nel progetto viene dotato dal committente di una serie di sensori. Al momento dell'intervista il committente pianifica soltanto l'utilizzo di sonde del marchio Lastem, ma non esclude che in futuro potrebbe essere utilizzata sensoristica di altri marchi.
+
+Le sonde di marchio Lastem utilizzate sono:
+
+-   termometri, che misurano la temperatura in gradi Celsius;
+
+-   flussimetri, che rilevano il flusso di calore in W/m².
+
+Di solito, su ogni tetto sono previsti 4 punti di misura, uno per ciascun lato orientato verso un punto cardinale. Tuttavia, il numero di punti di misura per ogni tetto e la composizione dei punti stessi possono variare a seconda della fattibilità dell'installazione delle sonde. Ogni punto di misura, quando completo, è dotato di 3 sonde:
+
+-   una sonda che misura la temperatura dell'aria a 100 mm dalla superficie esterna del tetto;
+
+-   una sonda che rileva la temperatura della superficie esterna del tetto;
+
+-   una sonda che misura il flusso di calore entrante o uscente dal tetto.
+
+Ogni sonda è collegata a un logger, che campiona il segnale elettrico prodotto dalle sonde ogni minuto e trasmette i dati campionati al ricevitore a cui è collegato. Insieme ai dati delle sonde, comunica anche la propria temperatura interna e tensione di alimentazione, sempre con una frequenza di un minuto.
+
+Il ricevitore raccoglie i dati provenienti dai logger a esso collegati, li salva in un file CSV e li carica su un server FTP tramite la connessione a internet di cui è dotato. Questi file contengono solitamente 10 campionature, cioè i dati acquisiti dalle sonde collegate in un intervallo di 10 minuti, ma il numero effettivo può variare per vari motivi.
+
+```{mermaid}
+classDiagram
+    Logger "1..*" -- "1" Receiver
+    Sensor "1..*" -- "1" Logger
+    Sensor <|-- TemperatureProbe
+    Sensor <|-- HeatFluxMeter
+```
+
+---
+
+**TODO**:
+
+- parte di calcolo dei KPI
+
+---
+
+# 2 - Design
+
+## 2.1 - Architettura
+
+L'architettura dell'applicativo sviluppato è organizzata secondo il pattern ECB, scelto per la migliore manutenibilità per applicativi di medie-grandi dimensioni visto che si prevede che l'applicativo sarà oggetto di futuri ampliamenti.
+
+La parte "controller", che incapsula la business logic, è suddivisa nelle seguenti sottoparti:
+
+-   **fetcher**: che si occupano di acquisire i dati senza però alterarli in alcun modo
+-   **importer**: parte di business logic che si occupa di fare il parsing dei dati acquisiti;
+
+~~TODO~~
+
+## 2.2 - Design dettagliato
+
+### Gestione dei processi in background
+
+Si è utilizzatato il pattern Observer sfruttando l'implementazione offerta dalla libreria "Reactive Extension", che permette di definire dichiarativamente delle operazioni da eseguire in modo asincrono. Sarà poi premura della libreria decidere come schedularle in thread fisici e virtuali.
+
+Si è quindi deciso di dotare ogni classe attiva di cui potrebbe essere necessario eseguire la logica in background del metodo `getObservable()`. Sarà cura di chi lo chiama istruire l'observable ad essere eseguito in bacgrkound o meno.
+
+# 3 - Sviluppo
+
+## 3.1 - Testing automatizzato
+
+## 3.2 - Note di sviluppo
+
+# 4 - Commenti finali
+
+## 4.1 - Autovalutazione e lavori futuri
+
+## 4.2 - Difficoltà incontrate e commenti per i docenti
+
+# Appendice A - Guida utente

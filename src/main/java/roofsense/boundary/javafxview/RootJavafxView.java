@@ -1,4 +1,4 @@
-package roofsense.view.javafxview;
+package roofsense.boundary.javafxview;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;

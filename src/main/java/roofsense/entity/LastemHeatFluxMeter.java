@@ -1,6 +1,4 @@
-package roofsense.importers;
-
-import roofsense.model.LastemSensor;
+package roofsense.entity;
 
 public class LastemHeatFluxMeter extends LastemSensor {
 

@@ -1,7 +1,8 @@
-package roofsense.importers.fetchers;
+package roofsense.controller.importers.fetchers;
 
 import io.reactivex.rxjava3.schedulers.Schedulers;
 import org.junit.jupiter.api.Test;
+import roofsense.controller.fetchers.LocalDirectoryFetcher;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;

@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" stylesheets="@../style.css"
-      fx:id="rootNode" fx:controller="roofsense.view.javafxview.DevicesOverviewJavafxView">
+      fx:id="rootNode" fx:controller="roofsense.boundary.javafxview.DevicesOverviewJavafxView">
     <ToolBar>
         <HBox HBox.hgrow="ALWAYS"/>
         <Button text="Add roof"/>
@@ -30,7 +30,7 @@
         </VBox>
         <GridPane styleClass="right-pane"
                   AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
-            
+
         </GridPane>
     </AnchorPane>
 </VBox>

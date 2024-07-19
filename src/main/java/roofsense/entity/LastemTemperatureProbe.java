@@ -1,4 +1,4 @@
-package roofsense.model;
+package roofsense.entity;
 
 public enum LastemTemperatureProbe {
     ;

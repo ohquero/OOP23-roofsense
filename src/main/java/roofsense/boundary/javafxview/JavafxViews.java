@@ -1,4 +1,4 @@
-package roofsense.view.javafxview;
+package roofsense.boundary.javafxview;
 
 import javafx.fxml.FXMLLoader;
 
@@ -34,7 +34,7 @@ public class JavafxViews {
             final var view = new FXMLLoader(ClassLoader.getSystemResource(fxmlPath));
             view.load();
             return view.getController();
-        } catch (IOException e) {
+        } catch (final IOException e) {
             throw new RuntimeException(e);
         }
     }

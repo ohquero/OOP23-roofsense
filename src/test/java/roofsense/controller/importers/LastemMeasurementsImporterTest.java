@@ -1,13 +1,13 @@
-package roofsense.importers;
+package roofsense.controller.importers;
 
 import io.reactivex.rxjava3.core.Observable;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import roofsense.importers.fetchers.Fetcher;
-import roofsense.model.LastemHeatFluxMeterMeasurement;
-import roofsense.model.LastemLoggerStatus;
-import roofsense.model.LastemReceiverStatus;
-import roofsense.model.LastemTemperatureProbeMeasurement;
+import roofsense.controller.fetchers.Fetcher;
+import roofsense.entity.LastemHeatFluxMeterMeasurement;
+import roofsense.entity.LastemLoggerStatus;
+import roofsense.entity.LastemReceiverStatus;
+import roofsense.entity.LastemTemperatureProbeMeasurement;
 
 import java.io.File;
 import java.nio.file.Path;

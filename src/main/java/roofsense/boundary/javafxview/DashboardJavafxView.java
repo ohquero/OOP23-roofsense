@@ -1,19 +1,16 @@
-package roofsense.view.javafxview;
+package roofsense.boundary.javafxview;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.layout.VBox;
 
-public class DevicesOverviewJavafxView extends JavafxView {
+public class DashboardJavafxView extends JavafxView {
 
     @FXML
     private VBox rootNode;
 
-    public void initialize() {
-    }
-
-    @Override
     public Node getRootNode() {
         return rootNode;
     }
+
 }

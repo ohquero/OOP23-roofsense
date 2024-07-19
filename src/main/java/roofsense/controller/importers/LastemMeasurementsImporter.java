@@ -1,9 +1,9 @@
-package roofsense.importers;
+package roofsense.controller.importers;
 
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
-import roofsense.importers.fetchers.Fetcher;
-import roofsense.model.*;
+import roofsense.controller.fetchers.Fetcher;
+import roofsense.entity.*;
 import tech.tablesaw.api.Table;
 import tech.tablesaw.io.csv.CsvReadOptions;
 

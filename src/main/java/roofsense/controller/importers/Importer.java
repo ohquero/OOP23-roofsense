@@ -1,8 +1,8 @@
-package roofsense.importers;
+package roofsense.controller.importers;
 
 import io.reactivex.rxjava3.core.Observable;
-import roofsense.importers.fetchers.Fetcher;
-import roofsense.model.Measurement;
+import roofsense.controller.fetchers.Fetcher;
+import roofsense.entity.Measurement;
 
 /**
  * An importer is an entity which fetches data from source (using a {@link Fetcher}) and parses them into

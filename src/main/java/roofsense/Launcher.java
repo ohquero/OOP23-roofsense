@@ -5,7 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-import roofsense.view.javafxview.JavafxViews;
+import roofsense.boundary.javafxview.JavafxViews;
 
 /**
  * Application entrypoint.
