@@ -62,7 +62,7 @@ classDiagram
 
 ## 2.1 - Architettura
 
-L'architettura dell'applicativo sviluppato è organizzata secondo il pattern ECB, scelto per la migliore manutenibilità per applicativi di medie-grandi dimensioni visto che si prevede che l'applicativo sarà oggetto di futuri ampliamenti.
+L'architettura dell'applicativo sviluppato è organizzata secondo il pattern ECB.
 
 La parte "controller", che incapsula la business logic, è suddivisa nelle seguenti sottoparti:
 
